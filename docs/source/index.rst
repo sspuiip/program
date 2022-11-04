@@ -8,7 +8,7 @@
 
 .. toctree::
    :maxdepth: 2
-   :caption: Multi-View Clustering
+   :caption: Programming Technology
    :numbered:
 
    qt/qt_basic.md
