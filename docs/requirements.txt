@@ -1,0 +1,7 @@
+sphinx
+furo
+piccolo-theme
+sphinx_rtd_theme
+sphinx-book-theme
+myst-parser
+sphinx-mathjax-offline
