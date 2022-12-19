@@ -93,13 +93,12 @@
 </section>
 <section id="windows">
 <h2><span class="section-number">1.2. </span>Windows 安装与设置<a class="headerlink" href="#windows" title="此标题的永久链接"></a></h2>
-<p>1.2 python中安装：<code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">pybind11</span></code></p>
-<p>1.3 VC中安装：</p>
-<p>1.3.1 Windows系统： 	Microsoft Visaul Studio 2017 x64，Anaconda3 , with python 3.8</p>
-<p>1.3.2 Pybind11安装：
-pybind11是 header-only的，因此不需要编译动态链接库，直接使用即可
-1）下载pybind11 https://github.com/pybind/pybind11解压到C:\pybind11-master
-2）环境变量添加：</p>
+<p>  1. Windows系统</p>
+<p>  Microsoft Visaul Studio 2017 x64，Anaconda3 , with python 3.8</p>
+<p>  2. Pybind11安装</p>
+<p>  pybind11是 header-only的，因此不需要编译动态链接库，直接使用即可。</p>
+<p>  1）下载pybind11 https://github.com/pybind/pybind11解压到C:\pybind11-master；</p>
+<p>  2）环境变量添加：</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">C</span><span class="p">:</span>\<span class="n">ProgramData</span>\<span class="n">Anaconda3</span><span class="p">;</span>
   <span class="n">C</span><span class="p">:</span>\<span class="n">ProgramData</span>\<span class="n">Anaconda3</span>\<span class="n">Library</span>\<span class="n">mingw</span><span class="o">-</span><span class="n">w64</span>\<span class="nb">bin</span><span class="p">;</span>
   <span class="n">C</span><span class="p">:</span>\<span class="n">ProgramData</span>\<span class="n">Anaconda3</span>\<span class="n">Library</span>\<span class="n">usr</span>\<span class="nb">bin</span><span class="p">;</span>
@@ -112,28 +111,22 @@ pybind11是 header-only的，因此不需要编译动态链接库，直接使用
   <span class="n">C</span><span class="p">:</span>\<span class="n">pybind11</span><span class="o">-</span><span class="n">master</span>\<span class="n">include</span><span class="p">;</span>  
 </pre></div>
 </div>
-<p>3）windows下python环境变量设置
-Admin用户变量：<code class="docutils literal notranslate"><span class="pre">PYTHONHOME</span>&#160; <span class="pre">C:\ProgramData\Anaconda3</span></code>
-<code class="docutils literal notranslate"><span class="pre">PYTHONPATH</span>&#160; <span class="pre">C:\ProgramData\Anaconda3\Lib\site-packages</span></code></p>
-<ol class="arabic simple" start="2">
-<li><p>使用VS2017测试
-2.1.使用C++编写python扩展（python调用C++）新建一个vs c++工程 example</p></li>
-</ol>
-<p>2.2.工程配置：
-1）设置编译输出类型
-配置属性–常规–常规–目标文件扩展名：.pyd
-配置属性–常规–项目默认值-配置类型：动态库.dll</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>2）添加include包含： 
-  配置属性--VC++目录--常规--包含目录：
-  C:\pybind11-master\include
-  C:\ProgramData\Anaconda3\include
-
-3）链接器配置：
-  链接器-常规-附加库目录：C:\ProgramData\Anaconda3\libs
-  链接器-输入-附加依赖项：python3.lib
+<p>  3）windows下python环境变量设置</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>  Admin用户变量：`PYTHONHOME  C:\ProgramData\Anaconda3`
+                               ` PYTHONPATH  C:\ProgramData\Anaconda3\Lib\site-packages `
 </pre></div>
 </div>
-<p>文件内容：</p>
+<p>  3.  使用VS2017测试</p>
+<p>   使用C++编写python扩展（python调用C++）新建一个vs c++工程 example</p>
+<p>   工程配置：</p>
+<p>   1）设置编译输出类型</p>
+<p>  配置属性–常规–常规–目标文件扩展名：.pyd</p>
+<p>  配置属性–常规–项目默认值-配置类型：动态库.dll</p>
+<p>   2）添加include包含：</p>
+<p>  配置属性–VC++目录–常规–包含目录：<code class="docutils literal notranslate"><span class="pre">C:\pybind11-master\include</span></code>,<code class="docutils literal notranslate"><span class="pre">C:\ProgramData\Anaconda3\include</span></code></p>
+<p>   3）链接器配置：</p>
+<p>  链接器-常规-附加库目录：<code class="docutils literal notranslate"><span class="pre">C:\ProgramData\Anaconda3\libs</span></code>; 链接器-输入-附加依赖项：<code class="docutils literal notranslate"><span class="pre">python3.lib</span></code></p>
+<p>  文件内容：</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span><span class="n">example1</span><span class="o">.</span><span class="n">h</span>
 		<span class="c1">#pragma once</span>
 		<span class="nb">int</span> <span class="n">sub</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">);</span>
