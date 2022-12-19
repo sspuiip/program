@@ -8,16 +8,18 @@
 
 ## Windows 安装与设置
 
-1.2 python中安装：`pip install pybind11`
 
-1.3 VC中安装：
+&emsp;&emsp;1. Windows系统
 
-1.3.1 Windows系统： 	Microsoft Visaul Studio 2017 x64，Anaconda3 , with python 3.8 
+&emsp;&emsp;Microsoft Visaul Studio 2017 x64，Anaconda3 , with python 3.8 
 
-1.3.2 Pybind11安装：
-		pybind11是 header-only的，因此不需要编译动态链接库，直接使用即可
-		 1）下载pybind11 https://github.com/pybind/pybind11解压到C:\pybind11-master
- 		2）环境变量添加： 
+&emsp;&emsp;2. Pybind11安装
+
+&emsp;&emsp;pybind11是 header-only的，因此不需要编译动态链接库，直接使用即可。
+
+&emsp;&emsp;1）下载pybind11 https://github.com/pybind/pybind11解压到C:\pybind11-master；	
+
+&emsp;&emsp;2）环境变量添加： 
 
 ``` 
   C:\ProgramData\Anaconda3;
@@ -32,30 +34,34 @@
   C:\pybind11-master\include;  
 ```
 
-3）windows下python环境变量设置
+&emsp;&emsp;3）windows下python环境变量设置
+
       Admin用户变量：`PYTHONHOME  C:\ProgramData\Anaconda3`
                                    ` PYTHONPATH  C:\ProgramData\Anaconda3\Lib\site-packages `
 
 
 
-2.  使用VS2017测试
-		2.1.使用C++编写python扩展（python调用C++）新建一个vs c++工程 example
+&emsp;&emsp;3.  使用VS2017测试
 
-2.2.工程配置：
-	1）设置编译输出类型 
-      配置属性--常规--常规--目标文件扩展名：.pyd
-      配置属性--常规--项目默认值-配置类型：动态库.dll
+&emsp;&emsp; 使用C++编写python扩展（python调用C++）新建一个vs c++工程 example
 
- 	2）添加include包含： 
- 	  配置属性--VC++目录--常规--包含目录：
- 	  C:\pybind11-master\include
- 	  C:\ProgramData\Anaconda3\include
+&emsp;&emsp; 工程配置：
+
+&emsp;&emsp; 1）设置编译输出类型 
+
+&emsp;&emsp;配置属性--常规--常规--目标文件扩展名：.pyd
+
+&emsp;&emsp;配置属性--常规--项目默认值-配置类型：动态库.dll
+
+&emsp;&emsp; 2）添加include包含： 
+ 	  
+&emsp;&emsp;配置属性--VC++目录--常规--包含目录：`C:\pybind11-master\include`,`C:\ProgramData\Anaconda3\include`
  	
- 	3）链接器配置：
- 	  链接器-常规-附加库目录：C:\ProgramData\Anaconda3\libs
- 	  链接器-输入-附加依赖项：python3.lib
+&emsp;&emsp; 3）链接器配置：
 
-文件内容：
+&emsp;&emsp;链接器-常规-附加库目录：`C:\ProgramData\Anaconda3\libs`; 链接器-输入-附加依赖项：`python3.lib`
+
+&emsp;&emsp;文件内容：
 
 ```
 //example1.h
