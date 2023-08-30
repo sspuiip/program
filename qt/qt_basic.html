@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="zh-CN" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>1. Qt Basic &mdash; Program 1.0 文档</title>
@@ -11,10 +11,9 @@
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
         <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/sphinx_highlight.js"></script>
         <script src="../_static/translations.js"></script>
@@ -22,7 +21,7 @@
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
     <link rel="next" title="1. Pybind11实现Python与C++无缝连接" href="../python/pybinder11.html" />
-    <link rel="prev" title="目录" href="../index.html" /> 
+    <link rel="prev" title="1. Git work with Github" href="../git/git_work.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -30,17 +29,25 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> Program
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Program
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="搜索文档" />
+    <input type="text" name="q" placeholder="搜索文档" aria-label="搜索文档" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="导航菜单">
-              <p class="caption" role="heading"><span class="caption-text">Qt Technology</span></p>
+              <p class="caption" role="heading"><span class="caption-text">Git</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../git/git_work.html">1. Git work with Github</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Qt Technology</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">1. Qt Basic</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#qtmysql">1.1. Qt连接MySQL</a></li>
@@ -65,7 +72,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="页面导航">
   <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a></li>
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
       <li class="breadcrumb-item active"><span class="section-number">1. </span>Qt Basic</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/qt/qt_basic.md.txt" rel="nofollow"> 查看页面源码</a>
@@ -83,38 +90,38 @@
 <ol class="arabic simple">
 <li><p><strong>核心代码</strong></p></li>
 </ol>
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;QSqlDatabase&gt;</span><span class="cp"></span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;QDebug&gt;</span><span class="cp"></span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;QMessageBox&gt;</span><span class="cp"></span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;QSqlError&gt;</span><span class="cp"></span>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;QSqlDatabase&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;QDebug&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;QMessageBox&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;QSqlError&gt;</span>
 
 <span class="w">    </span><span class="c1">//连接数据库</span>
-<span class="w">    </span><span class="n">QSqlDatabase</span><span class="w"> </span><span class="n">db</span><span class="o">=</span><span class="n">QSqlDatabase</span><span class="o">::</span><span class="n">addDatabase</span><span class="p">(</span><span class="s">&quot;QMYSQL&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="n">db</span><span class="p">.</span><span class="n">setHostName</span><span class="p">(</span><span class="s">&quot;127.0.0.1&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">QSqlDatabase</span><span class="w"> </span><span class="n">db</span><span class="o">=</span><span class="n">QSqlDatabase</span><span class="o">::</span><span class="n">addDatabase</span><span class="p">(</span><span class="s">&quot;QMYSQL&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">db</span><span class="p">.</span><span class="n">setHostName</span><span class="p">(</span><span class="s">&quot;127.0.0.1&quot;</span><span class="p">);</span>
 
-<span class="w">    </span><span class="n">db</span><span class="p">.</span><span class="n">setDatabaseName</span><span class="p">(</span><span class="s">&quot;docmanager&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="n">db</span><span class="p">.</span><span class="n">setUserName</span><span class="p">(</span><span class="s">&quot;root&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="n">db</span><span class="p">.</span><span class="n">setPassword</span><span class="p">(</span><span class="s">&quot;123156&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">db</span><span class="p">.</span><span class="n">setDatabaseName</span><span class="p">(</span><span class="s">&quot;docmanager&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">db</span><span class="p">.</span><span class="n">setUserName</span><span class="p">(</span><span class="s">&quot;root&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">db</span><span class="p">.</span><span class="n">setPassword</span><span class="p">(</span><span class="s">&quot;123156&quot;</span><span class="p">);</span>
 
-<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">db</span><span class="p">.</span><span class="n">open</span><span class="p">())</span><span class="w"></span>
-<span class="w">    </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">QString</span><span class="w"> </span><span class="n">errInfo</span><span class="o">=</span><span class="n">db</span><span class="p">.</span><span class="n">lastError</span><span class="p">().</span><span class="n">text</span><span class="p">();</span><span class="w"></span>
-<span class="w">        </span><span class="n">qDebug</span><span class="p">()</span><span class="o">&lt;&lt;</span><span class="n">errInfo</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="k">else</span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">qDebug</span><span class="p">()</span><span class="o">&lt;&lt;</span><span class="s">&quot;info: create connection to db is successful!&quot;</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">db</span><span class="p">.</span><span class="n">open</span><span class="p">())</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">QString</span><span class="w"> </span><span class="n">errInfo</span><span class="o">=</span><span class="n">db</span><span class="p">.</span><span class="n">lastError</span><span class="p">().</span><span class="n">text</span><span class="p">();</span>
+<span class="w">        </span><span class="n">qDebug</span><span class="p">()</span><span class="o">&lt;&lt;</span><span class="n">errInfo</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span><span class="k">else</span><span class="p">{</span>
+<span class="w">        </span><span class="n">qDebug</span><span class="p">()</span><span class="o">&lt;&lt;</span><span class="s">&quot;info: create connection to db is successful!&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
 
-<span class="w">    </span><span class="n">db</span><span class="p">.</span><span class="n">close</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="n">db</span><span class="p">.</span><span class="n">close</span><span class="p">();</span>
 </pre></div>
 </div>
 <ol class="arabic simple" start="2">
 <li><p><strong>“Authentication plugin ‘caching_sha2_password”错误</strong></p></li>
 </ol>
 <p>如果是MySQL8.0版本，需要修改登录数据库的授权模式。首先打开MySQL的命令行，输入数据库密码。</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>ALTER USER <span class="s1">&#39;root&#39;</span>@<span class="s1">&#39;localhost&#39;</span> IDENTIFIED BY <span class="s1">&#39;password&#39;</span> PASSWORD EXPIRE NEVER<span class="p">;</span>
-ALTER USER <span class="s1">&#39;root&#39;</span>@<span class="s1">&#39;localhost&#39;</span> IDENTIFIED WITH mysql_native_password BY <span class="s1">&#39;password&#39;</span><span class="p">;</span>
-FLUSH PRIVILEGES<span class="p">;</span>
-ALTER USER <span class="s1">&#39;root&#39;</span>@<span class="s1">&#39;localhost&#39;</span> IDENTIFIED BY <span class="s1">&#39;新密码&#39;</span>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>ALTER<span class="w"> </span>USER<span class="w"> </span><span class="s1">&#39;root&#39;</span>@<span class="s1">&#39;localhost&#39;</span><span class="w"> </span>IDENTIFIED<span class="w"> </span>BY<span class="w"> </span><span class="s1">&#39;password&#39;</span><span class="w"> </span>PASSWORD<span class="w"> </span>EXPIRE<span class="w"> </span>NEVER<span class="p">;</span>
+ALTER<span class="w"> </span>USER<span class="w"> </span><span class="s1">&#39;root&#39;</span>@<span class="s1">&#39;localhost&#39;</span><span class="w"> </span>IDENTIFIED<span class="w"> </span>WITH<span class="w"> </span>mysql_native_password<span class="w"> </span>BY<span class="w"> </span><span class="s1">&#39;password&#39;</span><span class="p">;</span>
+FLUSH<span class="w"> </span>PRIVILEGES<span class="p">;</span>
+ALTER<span class="w"> </span>USER<span class="w"> </span><span class="s1">&#39;root&#39;</span>@<span class="s1">&#39;localhost&#39;</span><span class="w"> </span>IDENTIFIED<span class="w"> </span>BY<span class="w"> </span><span class="s1">&#39;新密码&#39;</span>
 </pre></div>
 </div>
 <ol class="arabic simple" start="3">
@@ -157,7 +164,7 @@ ALTER USER <span class="s1">&#39;root&#39;</span>@<span class="s1">&#39;localhos
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="页脚">
-        <a href="../index.html" class="btn btn-neutral float-left" title="目录" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="../git/git_work.html" class="btn btn-neutral float-left" title="1. Git work with Github" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
         <a href="../python/pybinder11.html" class="btn btn-neutral float-right" title="1. Pybind11实现Python与C++无缝连接" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

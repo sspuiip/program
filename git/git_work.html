@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>1. Git work with Github &mdash; Program 1.0 文档</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/translations.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="1. Qt Basic" href="../qt/qt_basic.html" />
+    <link rel="prev" title="目录" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Program
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="搜索文档" aria-label="搜索文档" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="导航菜单">
+              <p class="caption" role="heading"><span class="caption-text">Git</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">1. Git work with Github</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#set-up-git-software-on-your-os">1.1. Set up git software on your OS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#initalizae-the-enviroment">1.2. Initalizae the enviroment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#do-some-works-within-the-reposiory">1.3. Do some works within the reposiory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#update-the-remote-reposiory">1.4. Update the remote reposiory</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Qt Technology</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../qt/qt_basic.html">1. Qt Basic</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Python Technology</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../python/pybinder11.html">1. Pybind11实现Python与C++无缝连接</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="移动版导航菜单" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Program</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="页面导航">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">1. </span>Git work with Github</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/git/git_work.md.txt" rel="nofollow"> 查看页面源码</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="git-work-with-github">
+<h1><span class="section-number">1. </span>Git work with Github<a class="headerlink" href="#git-work-with-github" title="此标题的永久链接"></a></h1>
+<section id="set-up-git-software-on-your-os">
+<h2><span class="section-number">1.1. </span>Set up git software on your OS<a class="headerlink" href="#set-up-git-software-on-your-os" title="此标题的永久链接"></a></h2>
+<ul class="simple">
+<li><p>download git for windows and then install</p></li>
+</ul>
+</section>
+<section id="initalizae-the-enviroment">
+<h2><span class="section-number">1.2. </span>Initalizae the enviroment<a class="headerlink" href="#initalizae-the-enviroment" title="此标题的永久链接"></a></h2>
+<ul>
+<li><p>select a position for your work, such as <code class="docutils literal notranslate"><span class="pre">c:\\work_place</span></code>, then enter that path.</p></li>
+<li><p>initialize the git enviroment</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">init</span></code></p>
+</div></blockquote>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">config</span> <span class="pre">--global</span> <span class="pre">user.name</span> <span class="pre">&quot;9527atct&quot;</span></code></p>
+</div></blockquote>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">config</span> <span class="pre">--global</span> <span class="pre">user.email</span> <span class="pre">&quot;lqj_614_19&#64;163.com&quot;</span></code></p>
+</div></blockquote>
+</li>
+<li><p>pull the remote repository</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pull</span> <span class="pre">https://github.com/9527atct/9527atct.github.io.git</span></code></p>
+</div></blockquote>
+</li>
+</ul>
+</section>
+<section id="do-some-works-within-the-reposiory">
+<h2><span class="section-number">1.3. </span>Do some works within the reposiory<a class="headerlink" href="#do-some-works-within-the-reposiory" title="此标题的永久链接"></a></h2>
+<ul class="simple">
+<li><p>edit the files within reposiory, that is, to add or edit or delete some files.</p></li>
+</ul>
+</section>
+<section id="update-the-remote-reposiory">
+<h2><span class="section-number">1.4. </span>Update the remote reposiory<a class="headerlink" href="#update-the-remote-reposiory" title="此标题的永久链接"></a></h2>
+<ul>
+<li><p>update</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span> <span class="pre">.</span></code></p>
+</div></blockquote>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span> <span class="pre">-m</span> <span class="pre">&quot;commit</span> <span class="pre">information</span> <span class="pre">made</span> <span class="pre">by</span> <span class="pre">your</span> <span class="pre">self&quot;</span></code></p>
+</div></blockquote>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span> <span class="pre">origin</span> <span class="pre">master</span></code></p>
+</div></blockquote>
+</li>
+<li><p>first update, need to configure the remote information</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">remote</span> <span class="pre">add</span> <span class="pre">origin</span> <span class="pre">https://github.com/9527atct/9527atct.github.io.git</span></code></p>
+</div></blockquote>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">remote</span> <span class="pre">-v</span></code></p>
+</div></blockquote>
+</li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="页脚">
+        <a href="../index.html" class="btn btn-neutral float-left" title="目录" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="../qt/qt_basic.html" class="btn btn-neutral float-right" title="1. Qt Basic" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 2022, SSPUIIP.</p>
+  </div>
+
+  利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用的 
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    由 <a href="https://readthedocs.org">Read the Docs</a> 开发.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

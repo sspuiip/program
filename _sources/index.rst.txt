@@ -8,6 +8,13 @@
 
 .. toctree::
    :maxdepth: 2
+   :caption: Git
+   :numbered:
+
+   git/git_work.md
+
+.. toctree::
+   :maxdepth: 2
    :caption: Qt Technology
    :numbered:
 
